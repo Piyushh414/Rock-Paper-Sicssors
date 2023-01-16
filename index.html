@@ -29,13 +29,13 @@
 
         function playRound(computerSelection ,  playerSelection) {
 
-             if(computerSelection == "ROCK " && playerSelection == "ROCK")
+             if(computerSelection === "ROCK" && playerSelection === "ROCK")
               return  "Its a draw";
 
-              else if(computerSelection == "PAPER" && playerSelection == "PAPER")
+              else if(computerSelection === "PAPER" && playerSelection === "PAPER")
               return  "Its a draw";
 
-              else if(computerSelection == "SCISSOR" && playerSelection == "SCISSOR")
+              else if(computerSelection === "SCISSOR" && playerSelection === "SCISSOR")
               return  "Its a draw";
 
               else if(computerSelection === "ROCK" && playerSelection === "PAPER"){
@@ -55,7 +55,7 @@
               {x = x+1;
               return    "You win - SCISSOR beats PAPER ";}
 
-              else if(computerSelection === "SCISSOR" && playerSelection === "ROCK ")
+              else if(computerSelection === "SCISSOR" && playerSelection === "ROCK")
                   {x = x+1;
               return    "You win  - ROCK  beats SCISSOR ";}
 
@@ -73,7 +73,8 @@
                 computerSelection = getComputerChoice();
                 console.log( computerSelection + "is Computer's Choice");
 
-                let playerSelection = prompt("What is your choice");
+                let playerSelection1 = prompt("What is your choice");
+                let playerSelection = playerSelection1.toUpperCase();
                 console.log(playerSelection + " is player's Choice");
                 
 
